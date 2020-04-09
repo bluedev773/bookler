@@ -45,7 +45,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             echo 'Success! You are now registered. Redirecting to Login page!';
             
             header('Location: login.html');
-            sleep(5);
+            
         } else {
             //issue with sql statement
             echo "SQL statement error";

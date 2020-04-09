@@ -7,7 +7,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 body {
-    background-color: #435165;
+    background-color: white;
 }
 .login {
     width: 400px;
@@ -68,34 +68,37 @@ body {
 
 
 .navtop {
-	background-color: #2f3947;
-	height: 60px;
+	background-color:white ;
+	height: 75px;
 	width: 100%;
 	border: 0;
 }
 .navtop div {
 	display: flex;
 	margin: 0 auto;
-	width: 1000px;
+    width: auto;
+    min-width: 650px;
 	height: 100%;
 }
 .navtop div h1, .navtop div a {
-	display: inline-flex;
-	align-items: center;
+	display: inline-block;   
 }
 .navtop div h1 {
-	flex: 1;
-	font-size: 24px;
-	padding: 0;
-	margin: 0;
-	color: #eaebed;
-	font-weight: normal;
+	flex: 1; 
+	font-size: 30px;
+    padding: 0;
+    margin-bottom:1px;
+	color: #435165;
+    font-weight: normal;
+    text-align: center;
+
 }
 .navtop div a {
 	padding: 0 20px;
 	text-decoration: none;
-	color: #c1c4c8;
-	font-weight: bold;
+	color: #435165;
+    font-weight: bold;
+    height: 10px;
 }
 .navtop div a i {
 	padding: 2px 8px 0 0;
@@ -103,6 +106,7 @@ body {
 .navtop div a:hover {
 	color: #eaebed;
 }
+
 body.loggedin {
 	background-color: #f3f4f7;
 }
