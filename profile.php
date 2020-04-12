@@ -38,10 +38,14 @@ $stmt->close();
     <body class = "loggedin">
         <nav class = "navtop">
             <div>
-                <h1>Bookmark Manager</h1>
+				<a href="home.php">
+                    <img src="images/logo.png" alt="Bookler! an intuitive bookmark manager." height='75' width='75'>
+                </a>
+                <h1>Bookler</h1>
                 <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
 				<a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
 			</div>
+			<hr>
         </nav>
         <div class="content">
 			<h2>Profile Page</h2>

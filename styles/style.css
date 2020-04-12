@@ -7,7 +7,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 body {
-    background-color: white;
+    background-color: #f3f4f7;
+}
+hr{
+    margin: 0;
 }
 .login {
     width: 400px;
@@ -85,10 +88,11 @@ body {
 }
 .navtop div h1 {
 	flex: 1; 
-	font-size: 30px;
+	font-size: 46px;
     padding: 0;
     margin-bottom:1px;
-	color: #435165;
+    margin-top: 5px;
+	color: #4a536e;
     font-weight: normal;
     text-align: center;
 
@@ -96,7 +100,7 @@ body {
 .navtop div a {
 	padding: 0 20px;
 	text-decoration: none;
-	color: #435165;
+	color: #4a536e;
     font-weight: bold;
     height: 10px;
 }
