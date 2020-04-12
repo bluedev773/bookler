@@ -19,7 +19,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<body class="loggedin">
 		<nav class="navtop">
 			<div>
-				<a href="home.php">
+				<a href="home.php" id="logo">
                     <img src="images/logo.png" alt="Bookler! an intuitive bookmark manager." height='75' width='75'>
                 </a>
 				<h1>Bookler</h1>

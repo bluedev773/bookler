@@ -8,9 +8,15 @@
 }
 body {
     background-color: #f3f4f7;
+    margin:0;
 }
 hr{
     margin: 0;
+}
+
+#logo{
+    padding-left: 15px;
+    padding-top: 0px;
 }
 .login {
     width: 400px;
@@ -98,12 +104,13 @@ hr{
 
 }
 .navtop div a {
-	padding: 0 20px;
+	padding: 5px 20px;
 	text-decoration: none;
 	color: #4a536e;
     font-weight: bold;
     height: 10px;
 }
+
 .navtop div a i {
 	padding: 2px 8px 0 0;
 }
