@@ -80,7 +80,8 @@ hr{
 	background-color:white ;
 	height: 75px;
 	width: 100%;
-	border: 0;
+    border: 0;
+    margin-bottom:30px;
 }
 .navtop div {
 	display: flex;
