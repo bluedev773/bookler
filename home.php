@@ -15,8 +15,9 @@ if (!isset($_SESSION['loggedin'])) {
 		<title>Home Page</title>
 		<link href="styles/style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		
 	</head>
-	<body class="loggedin">
+	<body class="loggedin" onload="fetchBookmarks()">
 		<nav class="navtop">
 			<div>
 				<a href="home.php" id="logo">
@@ -28,9 +29,31 @@ if (!isset($_SESSION['loggedin'])) {
 			</div>
 			<hr>
 		</nav>
-		<div class="content">
+		<div class="content" id="topTen">
 			<h2>My Top Ten</h2>
 			<p>Welcome back, <?=$_SESSION['name']?>!</p>
 		</div>
+<!-- TODO: link inputs to database -->
+		<div class="content" id="add">
+			<h2>Add Bookmarks</h2>
+			<form id = "addForm">
+				<div class = "form-group">
+					<label>Site Name</label>
+					<input type="text" class = "form-control" id = "siteName" placeholder = "Website Name">
+				</div>
+				<div class = "form-group">
+					<label>Site URL</label>
+					<input type="text" class = "form-control" id = "siteUrl" placeholder = "Website URL">
+				</div>
+				<button type = "submit">Submit</button>
+			</form>
+		</div>
+		<div class="content" >
+			<h2>All Bookmarks</h2>
+			<div id="bookmarksResults">
+			</div>		
+		</div>
+
+		<script src="scripts/add.js"></script>
 	</body>
 </html>
