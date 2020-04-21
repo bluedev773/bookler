@@ -204,7 +204,6 @@ body.loggedin {
     transition: background-color 0.2s;
 }
 
-<<<<<<< HEAD
 .box{
     margin:10px;
     background-color:white;
@@ -224,5 +223,3 @@ body.loggedin {
     grid-template-columns: repeat(auto-fill, minmax(175px, 1fr) ) ;
 
 }
-=======
->>>>>>> 0785ec1caa16f1fa085acf07978c4c5a921529ab

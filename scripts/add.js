@@ -54,16 +54,9 @@ function fetchBookmarks(){
     for(var i = 0;i<bookmarks.length;i++){
         var name = bookmarks[i].name;
         var url = bookmarks[i].url;
-<<<<<<< HEAD
         bookmarksResults.innerHTML += '<div class = "box" onclick= "window.open(\''+addhttp(url)+'\',\'_blank\')" >'+
                                         '<h3>'+name+ 
                                         ' <a onclick="deleteBookmark(\''+url+'\'); event.stopPropagation();"  href="#">Delete</a> ' +
-=======
-        bookmarksResults.innerHTML += '<div >'+
-                                        '<h3>'+name+
-                                        ' <a target="_blank" href="'+addhttp(url)+'">Visit</a> ' +
-                                        ' <a onclick="deleteBookmark(\''+url+'\')"  href="#">Delete</a> ' +
->>>>>>> 0785ec1caa16f1fa085acf07978c4c5a921529ab
                                         '</h3>'+
                                         '</div>';
     }
@@ -111,7 +104,3 @@ function validateForm(siteName, siteUrl){
     }
     return url;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 0785ec1caa16f1fa085acf07978c4c5a921529ab
