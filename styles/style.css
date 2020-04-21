@@ -210,9 +210,22 @@ body.loggedin {
     border-radius: 5px;
     padding: 20px;
     cursor: pointer;
+    position:relative;
 }
 .box:hover{
     background-color: #f5f5cd;
+}
+.box h3 {
+    text-align: center;
+    
+}
+
+.box a{
+    position: absolute; 
+    right: 5px;
+    top: 5px;
+    /* top: 15px;
+    right: 15px; */
 }
 
 .wrapper{
