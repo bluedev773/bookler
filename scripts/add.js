@@ -55,9 +55,8 @@ function fetchBookmarks(){
         var name = bookmarks[i].name;
         var url = bookmarks[i].url;
         bookmarksResults.innerHTML += '<div class = "box" onclick= "window.open(\''+addhttp(url)+'\',\'_blank\')" >'+
-                                        '<h3>'+name+ 
-                                        ' <a onclick="deleteBookmark(\''+url+'\'); event.stopPropagation();"  href="#">Delete</a> ' +
-                                        '</h3>'+
+                                        '<h3>'+name+ '</h3>' +
+                                        ' <a onclick="deleteBookmark(\''+url+'\'); event.stopPropagation();"  href="#"><i class="fas fa-trash-alt"></i></a> ' +
                                         '</div>';
     }
 }
