@@ -38,14 +38,14 @@ if (!isset($_SESSION['loggedin'])) {
 			<h2>Add Bookmarks</h2>
 			<form id = "addForm">
 				<div class = "form-group">
-					<label>Name</label>
+					<label class= "formLabel">Name</label>
 					<input type="text" class = "form-control" id = "siteName" placeholder = "Website Name">
 				</div>
 				<div class = "form-group">
-					<label>URL</label>
+					<label class = "formLabel">URL</label>
 					<input type="text" class = "form-control" id = "siteUrl" placeholder = "Website URL">
 				</div>
-				<button type = "submit">Add</button>
+				<button id = "addbtn" type = "submit">Add</button>
 			</form>
 		</div>
 		<div class="content" >

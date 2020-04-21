@@ -71,7 +71,25 @@ hr{
     text-decoration: none;
 }
 .form-control{
+    float:right;
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 75%;
+  
+}
+.formLabel{
+
+    display: inline-block;
+    padding: 10px 10px 10px 0;
     
+}
+#addForm{
+    display: table;
+    width: 50%;
+    margin:auto;
+}
+#addbtn{
+    float: right;
 }
 
 
