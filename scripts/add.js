@@ -1,5 +1,5 @@
 
-document.getElementById("addForm").addEventListener("submit",saveBookmark);
+// document.getElementById("addForm").addEventListener("submit",saveBookmark);
 //save bookmark
 function saveBookmark(e){
     //get values from form
@@ -34,7 +34,7 @@ function saveBookmark(e){
         //set back to local storage
         localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
     }
-
+    return true;
     //reset form
     document.getElementById('addForm').reset();
      // Re-fetch bookmarks
@@ -42,6 +42,8 @@ function saveBookmark(e){
 
     //keep form from submitting
     e.preventDefault();
+   
+    
 }
 
 //fetch bookmarks

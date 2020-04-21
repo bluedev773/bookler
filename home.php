@@ -15,7 +15,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<title>Home Page</title>
 		<link href="styles/style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-		
+		<script src="scripts/add.js"></script>
 	</head>
 	<body class="loggedin" onload="fetchBookmarks()">
 		<nav class="navtop">
@@ -34,7 +34,7 @@ if (!isset($_SESSION['loggedin'])) {
 			<p>Welcome back, <?=$_SESSION['name']?>!</p>
 		</div>
 <!-- TODO: link inputs to database -->
-		<div class="content" id="add">
+		<!-- <div class="content" id="add">
 			<h2>Add Bookmarks</h2>
 			<form id = "addForm">
 				<div class = "form-group">
@@ -47,17 +47,35 @@ if (!isset($_SESSION['loggedin'])) {
 				</div>
 				<button id = "addbtn" type = "submit">Add</button>
 			</form>
+		</div> -->
+
+		<div class="content" id="add">
+			<h2>Add Bookmarks</h2>
+			<form id = "addForm" action="database.php" method="post" onsubmit='return saveBookmark()'>
+				
+				<div class = "form-group">
+						<label class= "formLabel">Name</label>
+						<input type="text" name="name" class = "form-control" id = "siteName" placeholder = "Website Name">
+					</div>
+					<div class = "form-group">
+						<label class = "formLabel">URL</label>
+						<input type="text" name="url" class = "form-control" id = "siteUrl" placeholder = "Website URL">
+					</div>
+					<button id = "addbtn"  type = "submit">Add</button>
+			</form>
 		</div>
+
+
+
 		<div class="content" >
 			<h2>All Bookmarks</h2>
 			
 		</div>
-	
 				<div class = "wrapper" id="bookmarksResults">	
 				</div>
 			
 		
 
-		<script src="scripts/add.js"></script>
+		
 	</body>
 </html>

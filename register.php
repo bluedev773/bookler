@@ -21,10 +21,6 @@ if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['emai
 	exit('Please complete the registration form');
 }
 
-//make sure the email is valid
-// if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-// 	exit('Email is not valid!');
-// }
 
 //check if the account already exists
 if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
