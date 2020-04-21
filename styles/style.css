@@ -87,6 +87,7 @@ hr{
     display: table;
     width: 50%;
     margin:auto;
+    margin-top: 20px;
 }
 #addbtn{
     float: right;
@@ -234,7 +235,7 @@ body.loggedin {
     position:relative;
 }
 .box:hover{
-    background-color: #f5f5cd;
+    background-color: #bcc8d4;
 }
 .box h3 {
     text-align: center;
