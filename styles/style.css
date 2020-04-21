@@ -1,13 +1,21 @@
 /* change styling */
 * {
-    box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 body {
-    background-color: white;
+    background-color: #f3f4f7;
+    margin:0;
+}
+hr{
+    margin: 0;
+}
+
+#logo{
+    padding-left: 15px;
+    padding-top: 0px;
 }
 .login {
     width: 400px;
@@ -71,7 +79,8 @@ body {
 	background-color:white ;
 	height: 75px;
 	width: 100%;
-	border: 0;
+    border: 0;
+    margin-bottom:30px;
 }
 .navtop div {
 	display: flex;
@@ -85,21 +94,23 @@ body {
 }
 .navtop div h1 {
 	flex: 1; 
-	font-size: 30px;
+	font-size: 46px;
     padding: 0;
     margin-bottom:1px;
-	color: #435165;
+    margin-top: 5px;
+	color: #4a536e;
     font-weight: normal;
     text-align: center;
 
 }
 .navtop div a {
-	padding: 0 20px;
+	padding: 5px 20px;
 	text-decoration: none;
-	color: #435165;
+	color: #4a536e;
     font-weight: bold;
     height: 10px;
 }
+
 .navtop div a i {
 	padding: 2px 8px 0 0;
 }
@@ -112,7 +123,8 @@ body.loggedin {
 }
 .content {
 	width: 1000px;
-	margin: 0 auto;
+    margin: 0 auto;
+
 }
 .content h2 {
 	margin: 0;
@@ -190,4 +202,24 @@ body.loggedin {
 .register form input[type="submit"]:hover {
   background-color: #2868c7;
     transition: background-color 0.2s;
+}
+
+.box{
+    margin:10px;
+    background-color:white;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #f5f5cd;
+}
+
+.wrapper{
+
+    margin: 0 auto;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr) ) ;
+
 }
