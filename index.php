@@ -9,7 +9,11 @@
     <body class = "index">
         <nav class = "navtop">
             <div>
+<<<<<<< HEAD:index.php
                 <a href="index.php"  id="logo">
+=======
+                <a href="index.html"  id="logo">
+>>>>>>> 0785ec1caa16f1fa085acf07978c4c5a921529ab:index.html
                     <img src="images/logo.png" alt="Bookler! an intuitive bookmark manager." height='75' width='75'>
                 </a>
                 <h1>Bookler</h1>
