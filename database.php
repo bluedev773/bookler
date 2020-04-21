@@ -12,7 +12,7 @@
     
     $name = $_POST['name'];
     $url = $_POST['url'];
-//TODO: make new table for each unique user
+//TODO: take unique users into account
     if($stmt = $conn->prepare('INSERT INTO bookmarks (name,url) VALUES (?,?)')){
         // hash password for security
         $stmt->bind_param('ss', $_POST['name'],$_POST['url']);
