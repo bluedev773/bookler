@@ -16,8 +16,7 @@ function saveBookmark(e){
     }
 
     //save to local storage
-    //TODO: save to database instead of localstorage
-
+    //TODO: fetch from database
     // localStorage.setItem('test', 'hello world');
     // console.log(localStorage.getItem('test'));
     // localStorage.removeItem('test');
