@@ -50,7 +50,6 @@ if (!isset($_SESSION['loggedin'])) {
 		</div>
 		<div class="content" >
 			<h2>All Bookmarks</h2>
-<<<<<<< HEAD
 			
 		</div>
 	
@@ -58,11 +57,6 @@ if (!isset($_SESSION['loggedin'])) {
 				</div>
 			
 		
-=======
-			<div id="bookmarksResults">
-			</div>		
-		</div>
->>>>>>> 0785ec1caa16f1fa085acf07978c4c5a921529ab
 
 		<script src="scripts/add.js"></script>
 	</body>
