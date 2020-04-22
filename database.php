@@ -1,24 +1,29 @@
 <?php
- 
+    session_start();
+
+    if (!isset($_SESSION['loggedin'])) {
+        header('Location: login.html');
+        exit;
+    } 
+
     $servername='localhost';
     $username='root';
     $password='';
-    $dbname="bookmarks";
+    $dbname="phplogin";
     $conn=mysqli_connect($servername,$username,$password,$dbname);
     if(mysqli_connect_errno()){
         //display error
         die('Connect Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
     }
     
-    $name = $_POST['name'];
-    $url = $_POST['url'];
 //TODO: take unique users into account
-    if($stmt = $conn->prepare('INSERT INTO bookmarks (name,url) VALUES (?,?)')){
+    if($stmt = $conn->prepare('INSERT INTO bookmarks (name,url,id) VALUES (?,?,?)')){
         // hash password for security
-        $stmt->bind_param('ss', $_POST['name'],$_POST['url']);
+        $stmt->bind_param('sss', $_POST['name'],$_POST['url'],$_SESSION[id]);
         $stmt->execute();
         $stmt->close();
         header('Location: home.php');
+        $conn->close();
     }
 
     
