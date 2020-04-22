@@ -16,7 +16,6 @@
         die('Connect Error (' . mysqli_connect_errno() . ') ' . mysqli_connect_error());
     }
     
-//TODO: take unique users into account
     if($stmt = $conn->prepare('INSERT INTO bookmarks (name,url,id) VALUES (?,?,?)')){
         // hash password for security
         $stmt->bind_param('sss', $_POST['name'],$_POST['url'],$_SESSION[id]);

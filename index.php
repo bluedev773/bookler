@@ -20,8 +20,11 @@
             <hr>
         </nav>
         <div class="content">
-            <h2>Welcome to Bookler, an intuitive bookmark manager! Login or make an account to get started.</h2>
-            <p>test</p>
+            <h1>Welcome to Bookler, an intuitive bookmark manager!</h1>
         </div>
+        <!--display top ten bookmarks across all users-->
+		<div class="content" id="topTen">
+			<h2>Top Ten Bookmarked Webpages!</h2>
+		</div>
     </body>
 </html>

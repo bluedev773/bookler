@@ -1,5 +1,4 @@
 
-// document.getElementById("addForm").addEventListener("submit",saveBookmark);
 //save bookmark
 function saveBookmark(e){
     //get values from form
@@ -17,9 +16,7 @@ function saveBookmark(e){
 
     //save to local storage
     //TODO: fetch from database
-    // localStorage.setItem('test', 'hello world');
-    // console.log(localStorage.getItem('test'));
-    // localStorage.removeItem('test');
+
     if(localStorage.getItem('bookmarks') === null){
         var bookmarks= [];
         //add bookmark to bookmarks array

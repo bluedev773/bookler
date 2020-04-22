@@ -1,7 +1,7 @@
 <?php
-// We need to use sessions, so you should always start sessions using the below code.
+
 session_start();
-// If the user is not logged in redirect to the login page...
+//redirect to login if user is not logged in
 if (!isset($_SESSION['loggedin'])) {
 	header('Location: login.html');
 	exit;
@@ -29,26 +29,9 @@ if (!isset($_SESSION['loggedin'])) {
 			</div>
 			<hr>
 		</nav>
-		<div class="content" id="topTen">
-			<h2>My Top Ten</h2>
-			<p>Welcome back, <?=$_SESSION['name']?>!</p>
-		</div>
-<!-- TODO: link inputs to database -->
-		<!-- <div class="content" id="add">
-			<h2>Add Bookmarks</h2>
-			<form id = "addForm">
-				<div class = "form-group">
-					<label class= "formLabel">Name</label>
-					<input type="text" class = "form-control" id = "siteName" placeholder = "Website Name">
-				</div>
-				<div class = "form-group">
-					<label class = "formLabel">URL</label>
-					<input type="text" class = "form-control" id = "siteUrl" placeholder = "Website URL">
-				</div>
-				<button id = "addbtn" type = "submit">Add</button>
-			</form>
-		</div> -->
 
+
+		<!--add bookmarks form-->
 		<div class="content" id="add">
 			<h2>Add Bookmarks</h2>
 			<form id = "addForm" action="database.php" method="post" onsubmit='return saveBookmark()'>
@@ -65,17 +48,13 @@ if (!isset($_SESSION['loggedin'])) {
 			</form>
 		</div>
 
-
-
+		<!--All bookmarks section-->
 		<div class="content" >
 			<h2>All Bookmarks</h2>
-			
 		</div>
-				<div class = "wrapper" id="bookmarksResults">	
-				</div>
-			
-		
-
-		
+		<!--placeholder div, content added from add.js-->
+		<div class = "wrapper" id="bookmarksResults">	
+		</div>
+	
 	</body>
 </html>

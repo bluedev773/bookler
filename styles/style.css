@@ -258,3 +258,9 @@ body.loggedin {
     grid-template-columns: repeat(auto-fill, minmax(175px, 1fr) ) ;
 
 }
+h1{
+    text-align: center;
+	padding: 25px 0;
+	font-size: 22px;
+	color: #4a536e;
+}
