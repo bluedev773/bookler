@@ -42,7 +42,7 @@ hr{
     align-items: center;
     width: 50px;
     height: 50px;
-    background-color: #3274d6;
+    background-color: #4a536e;
     color: #ffffff;
 }
 .login form input[type="password"], .login form input[type="text"] {
@@ -56,7 +56,7 @@ hr{
     width: 100%;
     padding: 15px;
    margin-top: 20px;
-    background-color: #3274d6;
+    background-color: #4a536e;
     border: 0;
     cursor: pointer;
     font-weight: bold;
@@ -200,7 +200,7 @@ body.loggedin {
     align-items: center;
     width: 50px;
    height: 50px;
-    background-color: #3274d6;
+    background-color: #4a536e;
     color: #ffffff;
 }
 .register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
@@ -214,7 +214,7 @@ body.loggedin {
     width: 100%;
     padding: 15px;
     margin-top: 20px;
-    background-color: #3274d6;
+    background-color: #4a536e;
    border: 0;
     cursor: pointer;
     font-weight: bold;

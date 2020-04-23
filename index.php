@@ -25,6 +25,10 @@
         <!--display top ten bookmarks across all users-->
 		<div class="content" id="topTen">
 			<h2>Top Ten Bookmarked Webpages!</h2>
+        </div>
+        <!--placeholder div, content added from add.js-->
+        <div class = "wrapper" id="topTen">	
+            <p>test</p>
 		</div>
     </body>
 </html>
