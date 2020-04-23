@@ -77,6 +77,7 @@ $stmt->close();
 		<div class = "wrapper" id="bookmarksResults">	
 			<?php 
 			print_r($result[3]);
+			//TODO: use array results to print the button
 			 ?>
 
 		</div>
