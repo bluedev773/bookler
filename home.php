@@ -18,24 +18,28 @@ if (mysqli_connect_errno()) {
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-//use account id to get saved bookmarks from database
-$stmt = $conn->prepare('SELECT name,url FROM bookmarks WHERE id = ?');
-$stmt->bind_param('i', $_SESSION['id']);
-$stmt->execute();
-$resultSet = $stmt->get_result();
-$result=$resultSet->fetch_all();
-$stmt->close();
-//TODO: return all elements instead of first element
+//get the bookmark info from database
+$sql = "SELECT name,url,bookmarkId FROM bookmarks WHERE id = '{$_SESSION['id']}'";
+$result = $conn->query($sql);
+
 ?>
 
-<!DOCTYPE html>
+<script>
+function addhttp(url) {
+  if (!/^(?:f|ht)tps?\:\/\//.test(url)) {
+      url = "http://" + url;
+  }
+  return url;
+}
+</script>
+
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Home Page</title>
 		<link href="styles/style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-		<script src="scripts/add.js"></script>
+		<script src="scripts/validate.js"></script>
 	</head>
 	<body class="loggedin" >
 	<!-- onload="fetchBookmarks()" -->
@@ -73,14 +77,18 @@ $stmt->close();
 		<div class="content" >
 			<h2>All Bookmarks</h2>
 		</div>
-		<!--placeholder div, content added from add.js-->
+		
 		<div class = "wrapper" id="bookmarksResults">	
-			<?php 
-			print_r($result[3]);
-			//TODO: use array results to print the button
-			 ?>
+			 <?php 
+				// 
+				while($row = $result->fetch_assoc()){
+					echo '<div class = "box" onclick="window.open(addhttp(\''.$row["url"].'\'))">'.
+	                                        '<h3>'.$row["name"].'</h3>'.
+	                                        '<a onclick = "event.stopPropagation();" href="delete.php?id=' . $row["bookmarkId"] . '"><i class="fas fa-trash-alt"></i></a>'.
+	                                        '</div>';
+				};
+			 ?> 
 
 		</div>
-	
 	</body>
 </html>
