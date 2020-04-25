@@ -22,6 +22,7 @@ if (mysqli_connect_errno()) {
 $sql = "SELECT name,url,bookmarkId FROM bookmarks WHERE id = '{$_SESSION['id']}'";
 $result = $conn->query($sql);
 
+
 ?>
 
 <script>
@@ -87,6 +88,7 @@ function addhttp(url) {
 	                                        '<a onclick = "event.stopPropagation();" href="delete.php?id=' . $row["bookmarkId"] . '"><i class="fas fa-trash-alt"></i></a>'.
 	                                        '</div>';
 				};
+				
 			 ?> 
 
 		</div>

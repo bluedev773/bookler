@@ -11,7 +11,7 @@ if (mysqli_connect_errno()) {
 }
 
 //get the bookmark info from database
-$sql = "SELECT name,url u FROM bookmarks GROUP BY name ORDER BY u asc limit 10;";
+$sql = "SELECT name,url, COUNT(*) AS cnt FROM bookmarks GROUP BY url ORDER BY cnt DESC limit 10;";
 $result = $conn->query($sql);
 
 ?>
@@ -56,7 +56,7 @@ function addhttp(url) {
 			 <?php 
 				// 
 				while($row = $result->fetch_assoc()){
-					echo '<div class = "box" onclick="window.open(addhttp(\''.$row["u"].'\'))">'.
+					echo '<div class = "box" onclick="window.open(addhttp(\''.$row["url"].'\'))">'.
 	                                        '<h3>'.$row["name"].'</h3>'.
 	                                        '</div>';
 				};
