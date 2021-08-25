@@ -10,7 +10,7 @@ if (!isset($_SESSION['loggedin'])) {
 //connect to database
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
-$DATABASE_PASS = '';
+$DATABASE_PASS = 'GwKz3CiBKVmX';
 $DATABASE_NAME = 'phplogin';
 $conn = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
